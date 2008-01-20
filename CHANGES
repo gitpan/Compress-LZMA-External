@@ -1,0 +1,9 @@
+CHANGES file for Compress::LZMA::External:
+
+0.32 Sun Jan 20 16:02:34 GMT 2008
+  - rename uncompress to decompress to be more like the other
+    Compress:: modules
+  - add prototypes
+
+0.31 Sun Jan 20 15:58:53 GMT 2008
+  - first release

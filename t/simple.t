@@ -10,6 +10,6 @@ my $data = 'X' x 1000;
 my $compressed = compress($data);
 is( length($compressed), 25 );
 
-my $uncompressed = uncompress($compressed);
+my $uncompressed = decompress($compressed);
 is( length($uncompressed), 1000 );
 is( $uncompressed, $data );

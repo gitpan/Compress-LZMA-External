@@ -5,15 +5,15 @@ use File::Spec::Functions;
 use File::Temp qw(tempfile);
 use IO::File;
 our @ISA     = qw(Exporter);
-our @EXPORT  = qw(compress uncompress);
-our $VERSION = '0.31';
+our @EXPORT  = qw(compress decompress);
+our $VERSION = '0.32';
 
-sub compress {
+sub compress ($) {
     my $data = shift;
     return _call( $data, 'data.txt', 'lzma -c -f' );
 }
 
-sub uncompress {
+sub decompress ($) {
     my $data = shift;
     return _call( $data, 'data.txt.lzma', 'lzma -c -d -f' );
 }
