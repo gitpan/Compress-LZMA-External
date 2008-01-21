@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use lib 'lib';
 use Test::More tests => 3;
-use Compress::LZMA::External;
+use Compress::LZMA::External qw(compress decompress);
 
 my $data = 'X' x 1000;
 

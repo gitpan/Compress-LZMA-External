@@ -4,9 +4,9 @@ use warnings;
 use File::Spec::Functions;
 use File::Temp qw(tempfile);
 use IO::File;
-our @ISA     = qw(Exporter);
-our @EXPORT  = qw(compress decompress);
-our $VERSION = '0.32';
+our @ISA       = qw(Exporter);
+our @EXPORT_OK = qw(compress decompress);
+our $VERSION   = '0.33';
 
 sub compress ($) {
     my $data = shift;
@@ -27,6 +27,7 @@ sub _call {
     $fh->close      || die "Error closing $path: $!";
     $fh = IO::File->new("$command $path |") || die "Error opening lzma: $!";
     my $out;
+
     while ( !$fh->eof ) {
         $out .= <$fh>;
     }
@@ -44,8 +45,9 @@ Compress::LZMA::External - Compress and decompress using LZMA
 
 =head1 SYNOPSIS
 
+  use Compress::LZMA::External qw(compress decompress);
   my $compressed = compress($raw_data);
-  my $uncompressed = uncompress($compressed_data);
+  my $decompressed = decompress($compressed_data);
 
 =head1 DESCRIPTION
 

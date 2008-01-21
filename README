@@ -2,8 +2,9 @@ NAME
     Compress::LZMA::External - Compress and decompress using LZMA
 
 SYNOPSIS
+      use Compress::LZMA::External qw(compress decompress);
       my $compressed = compress($raw_data);
-      my $uncompressed = uncompress($compressed_data);
+      my $decompressed = decompress($compressed_data);
 
 DESCRIPTION
     The Lempel-Ziv-Markov chain-Algorithm (LZMA) is an data compression
