@@ -1,5 +1,11 @@
 CHANGES file for Compress::LZMA::External:
 
+0.34 Wed Jan 23 18:20:12 GMT 2008
+  - add dependency for File::Temp 0.19
+  - warn and exit 0 if lzma is not found
+  - remove 'use lib' in the test
+  - (thanks to Adriano Ferreira)
+
 0.33 Mon Jan 21 07:29:57 GMT 2008
   - update docs
   - only export functions upon request

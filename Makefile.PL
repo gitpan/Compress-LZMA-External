@@ -12,10 +12,11 @@ if ($found) {
     print "found it at $found\n";
 } else {
     print "didn't find it\n";
-    die "****************************************************************
+    warn "****************************************************************
 Compress::LZMA::External could not find program 'lzma'. Please 
 install it and try again. For Ubuntu: sudo apt-get install lzma 
 ****************************************************************\n";
+    exit 0;
 }
 
 WriteMakefile(
@@ -23,7 +24,7 @@ WriteMakefile(
     VERSION_FROM => 'lib/Compress/LZMA/External.pm',
     AUTHOR       => 'Leon Brocard <acme@astray.com>',
     LICENSE      => 'perl',
-    PREREQ_PM    => { 'Test::More' => '0', }
+    PREREQ_PM    => { 'Test::More' => '0', 'File::Temp' => '0.19', }
 );
 
 sub find {
