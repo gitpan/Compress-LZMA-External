@@ -1,5 +1,8 @@
 CHANGES file for Compress::LZMA::External:
 
+0.35 Wed Sep 10 20:53:41 BST 2008
+  - add machine- and human-readable license
+
 0.34 Wed Jan 23 18:20:12 GMT 2008
   - add dependency for File::Temp 0.19
   - warn and exit 0 if lzma is not found

@@ -6,7 +6,7 @@ use File::Temp qw(tempfile);
 use IO::File;
 our @ISA       = qw(Exporter);
 our @EXPORT_OK = qw(compress decompress);
-our $VERSION   = '0.34';
+our $VERSION   = '0.35';
 
 sub compress ($) {
     my $data = shift;
@@ -66,6 +66,8 @@ Leon Brocard <acme@astray.com>.
 =head1 COPYRIGHT
 
 Copyright (C) 2008, Leon Brocard
+
+=head1 LICENSE
 
 This module is free software; you can redistribute it or modify it
 under the same terms as Perl itself.

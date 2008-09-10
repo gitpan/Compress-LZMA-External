@@ -22,6 +22,7 @@ install it and try again. For Ubuntu: sudo apt-get install lzma
 WriteMakefile(
     NAME         => 'Compress::LZMA::External',
     VERSION_FROM => 'lib/Compress/LZMA/External.pm',
+    ABSTRACT     => 'Compress and decompress using LZMA',
     AUTHOR       => 'Leon Brocard <acme@astray.com>',
     LICENSE      => 'perl',
     PREREQ_PM    => { 'Test::More' => '0', 'File::Temp' => '0.19', }

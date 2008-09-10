@@ -1,11 +1,11 @@
 --- #YAML:1.0
 name:                Compress-LZMA-External
-version:             0.34
-abstract:            ~
+version:             0.35
+abstract:            Compress and decompress using LZMA
 license:             perl
 author:              
     - Leon Brocard <acme@astray.com>
-generated_by:        ExtUtils::MakeMaker version 6.42
+generated_by:        ExtUtils::MakeMaker version 6.44
 distribution_type:   module
 requires:     
     File::Temp:                    0.19
